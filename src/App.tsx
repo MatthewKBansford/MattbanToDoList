@@ -44,12 +44,12 @@ function App() {
 
   return (
     <>
-      <div className="bg-white w-[30%] h-[40em] mx-auto my-[7%] rounded-xl px-16">
-        <h1 className="relative text-3xl font-semibold pt-[50px] text-[#100A57]">MattBan Todo List App</h1>
+      <div className="bg-white w-[30%] h-[40em] mx-auto my-[7%] rounded-xl px-16 max-[450px]:w-[90%] max-[450px]:px-8">
+        <h1 className="relative text-3xl font-semibold pt-[50px] text-[#100A57] max-[450px]:text-xl">MattBan Todo List App</h1>
 
-        <div className="relative grid grid-cols-2 h-16 mt-6">
-          <input type="text" placeholder="Add new task" value={value} onChange={(e) => setNewValue(e.target.value)}  className="bg-[#FFE7DE] rounded-full w-100 pl-5 focus:outline-0 "/>
-          <button className="bg-[#FA5113] rounded-full w-36 mx-20 font-semibold text-xl text-white hover:cursor-pointer " onClick={AddTodo}>ADD</button>
+        <div className="relative grid grid-cols-2 h-16 mt-6 ">
+          <input type="text" placeholder="Add new task" value={value} onChange={(e) => setNewValue(e.target.value)}  className="bg-[#FFE7DE] rounded-full w-100 pl-5 focus:outline-0 max-[450px]:w-70"/>
+          <button className="bg-[#FA5113] rounded-full w-36 mx-20 font-semibold text-xl text-white hover:cursor-pointer max-[450px]:mx-5" onClick={AddTodo}>ADD</button>
         </div>
 
         <div className="h-50 ">
@@ -58,8 +58,8 @@ function App() {
           <ul>{activeTodos.map((todo, index) => (
             <li className="relative grid grid-cols-3 mt-2" key={index}>
               <img src={checkbox} alt="check-icon" className="w-6 hover:cursor-pointer" onClick={() => AddToCompleted(index)} />
-              <p className="relative w-[250%] left-[-110px] text-[#100A57] ">{todo}</p>
-              <img src={close} alt="close-icon" className="w-6 ml-31 hover:cursor-pointer " onClick={() => RemoveToDo(index)}/>
+              <p className="relative w-[250%] left-[-110px] text-[#100A57] max-[450px]:left-[-70px]">{todo}</p>
+              <img src={close} alt="close-icon" className="w-6 ml-31 hover:cursor-pointer max-[450px]:ml-15" onClick={() => RemoveToDo(index)}/>
             </li>
            ))}         
            </ul>
@@ -72,7 +72,7 @@ function App() {
           <ul>{completedToDos.map((todo, index) => (
             <li className="relative grid grid-cols-3 mt-2 line-through" key={index}>
               <img src={checked} alt="checked-icon" className="w-6 hover:cursor-pointer" onClick={() => RestoreCompleted(index)}/>
-              <p className="relative w-[250%] left-[-110px] text-[#100A57]">{todo}</p>
+              <p className="relative w-[250%] left-[-110px] text-[#100A57] max-[450px]:left-[-50px]">{todo}</p>
               <img src={close} alt="close-icon" className="w-6 ml-31 hover:cursor-pointer" onClick={() => RemoveToDo(index)}/>
             </li>
             ))}
