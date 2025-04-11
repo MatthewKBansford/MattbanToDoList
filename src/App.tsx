@@ -73,7 +73,7 @@ function App() {
             <li className="relative grid grid-cols-3 mt-2 line-through" key={index}>
               <img src={checked} alt="checked-icon" className="w-6 hover:cursor-pointer" onClick={() => RestoreCompleted(index)}/>
               <p className="relative w-[250%] left-[-110px] text-[#100A57]">{todo}</p>
-              <img src={close} alt="close-icon" className="w-6 ml-31 hover:cursor-pointergit" onClick={() => RemoveToDo(index)}/>
+              <img src={close} alt="close-icon" className="w-6 ml-31 hover:cursor-pointer" onClick={() => RemoveToDo(index)}/>
             </li>
             ))}
           </ul>
