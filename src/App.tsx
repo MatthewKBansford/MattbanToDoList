@@ -58,8 +58,8 @@ function App() {
           <ul>{activeTodos.map((todo, index) => (
             <li className="relative grid grid-cols-3 mt-2" key={index}>
               <img src={checkbox} alt="check-icon" className="w-6 hover:cursor-pointer" onClick={() => AddToCompleted(index)} />
-              <p className="relative w-[250%] left-[-110px] text-[#100A57] max-[450px]:left-[-75px]">{todo}</p>
-              <img src={close} alt="close-icon" className="w-6 ml-31 hover:cursor-pointer max-[450px]:ml-15" onClick={() => RemoveToDo(index)}/>
+              <p className="relative w-[250%] left-[-110px] text-[#100A57] max-[450px]:left-[-70px] max-[450px]:w-[100%]">{todo}</p>
+              <img src={close} alt="close-icon" className="w-6 mx-30 hover:cursor-pointer max-[450px]:mx-16" onClick={() => RemoveToDo(index)}/>
             </li>
            ))}         
            </ul>
@@ -72,8 +72,8 @@ function App() {
           <ul>{completedToDos.map((todo, index) => (
             <li className="relative grid grid-cols-3 mt-2 line-through" key={index}>
               <img src={checked} alt="checked-icon" className="w-6 hover:cursor-pointer" onClick={() => RestoreCompleted(index)}/>
-              <p className="relative w-[250%] left-[-110px] text-[#100A57] max-[450px]:left-[-75px]">{todo}</p>
-              <img src={close} alt="close-icon" className="w-6 ml-31 hover:cursor-pointer max-[450px]:ml-15" onClick={() => RemoveToDo(index)}/>
+              <p className="relative w-[250%] left-[-110px] text-[#100A57] max-[450px]:left-[-70px] max-[450px]:w-[100%]">{todo}</p>
+              <img src={close} alt="close-icon" className="w-6 mx-30 hover:cursor-pointer max-[450px]:mx-16" onClick={() => RemoveToDo(index)}/>
             </li>
             ))}
           </ul>
